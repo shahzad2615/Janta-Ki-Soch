@@ -17,49 +17,49 @@ const Services = () => {
       icon: Building,
       title: 'Municipal Issues',
       description: 'Road maintenance, waste management, irregular water supply, and other civic infrastructure problems',
-      image: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://media.assettype.com/freepressjournal/2024-06/f5237c09-ff65-4faa-a85e-63e37ba7f4b5/WhatsApp_Image_2024_06_15_at_11_32_21_AM.jpeg'
     },
     {
       icon: Shield,
       title: "Women's Safety",
       description: 'Sexual harassment at workplaces, domestic violence, and crimes against women',
-      image: 'https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://dz01iyojmxk8t.cloudfront.net/wp-content/uploads/2019/12/05163310/files-india-assault-women_dbd75c92-ad70-11e8-8465-1eef8cfbb700.jpg'
     },
     {
       icon: Leaf,
       title: 'Environmental Concerns',
       description: 'Illegal deforestation, tree cutting, pollution, and environmental protection issues',
-      image: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://static.vecteezy.com/system/resources/previews/013/339/218/original/deforestation-trees-stump-and-deforestation-background-forest-and-environment-global-warming-cutting-down-trees-environmental-pollution-and-ecological-problems-landscape-of-dead-nature-with-cut-vector.jpg'
     },
     {
       icon: Scale,
       title: 'Legal Guidance',
       description: 'Legal support and guidance for various civil and criminal matters',
-      image: 'https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://lawbhoomi.com/wp-content/uploads/2023/04/Lawyer.webp'
     },
     {
       icon: GraduationCap,
       title: 'Educational Sector',
       description: 'Issues related to education system, schools, and academic institutions',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://th.bing.com/th/id/OIP.fFcQ_tmVnuuz_YsTHPkbFQHaE8?rs=1&pid=ImgDetMain'
     },
     {
       icon: Baby,
       title: 'Child Protection',
       description: 'Child abuse cases, child safety, and welfare-related matters',
-      image: 'https://images.pexels.com/photos/3933221/pexels-photo-3933221.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://th.bing.com/th/id/OIP.e1pb_86v9ZubopoB-L_aYgHaEI?rs=1&pid=ImgDetMain'
     },
     {
       icon: HeartHandshake,
       title: 'De-Addiction Support',
       description: 'Assistance for substance abuse and addiction recovery programs',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://th.bing.com/th/id/OIP.SsxYJbQrJvBXoZCO_H9EGwHaEJ?rs=1&pid=ImgDetMain'
     },
     {
       icon: AlertTriangle,
       title: 'Police Cases',
       description: 'Support with police complaints and law enforcement related issues',
-      image: 'https://images.pexels.com/photos/8728382/pexels-photo-8728382.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://media.licdn.com/dms/image/v2/D4D12AQFwqr3E-Y26Lg/article-cover_image-shrink_423_752/B4DZV.AC1wHIAU-/0/1741575696300?e=2147483647&v=beta&t=HLtP1QFTLvQcHrqxWfgOQENrForLHRKsPsNVFpbNmdc'
     }
   ];
 
@@ -156,7 +156,7 @@ const Services = () => {
             <div className="text-center">
               <div className="bg-gradient-to-r from-green-100 to-green-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="https://images.pexels.com/photos/4467854/pexels-photo-4467854.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  src="https://static.vecteezy.com/system/resources/previews/003/720/476/non_2x/phone-icon-telephone-icon-symbol-for-app-and-messenger-vector.jpg"
                   alt="Phone consultation"
                   className="w-12 h-12 rounded-full object-cover"
                 />
