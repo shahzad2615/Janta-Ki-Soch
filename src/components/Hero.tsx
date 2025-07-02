@@ -26,6 +26,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="text-white">
+         
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               <span className="block">जनता की सोच</span>
               <span className="block text-3xl lg:text-4xl mt-2 text-blue-200">
