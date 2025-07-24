@@ -7,23 +7,15 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ComplaintForm from './components/ComplaintForm';
-import EmailSetup from './components/EmailSetup';
 
 function App() {
-  const [isComplaintFormOpen, setIsComplaintFormOpen] = useState(false);
+   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    const handleOpenComplaintForm = () => {
-      setIsComplaintFormOpen(true);
-    };
-
-    window.addEventListener('openComplaintForm', handleOpenComplaintForm);
-
-    return () => {
-      window.removeEventListener('openComplaintForm', handleOpenComplaintForm);
-    };
+    const openHandler = () => setShowForm(true);
+    window.addEventListener('openComplaintForm', openHandler);
+    return () => window.removeEventListener('openComplaintForm', openHandler);
   }, []);
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -33,11 +25,10 @@ function App() {
       <Services />
       <Contact />
       <Footer />
-      <ComplaintForm 
-        isOpen={isComplaintFormOpen} 
-        onClose={() => setIsComplaintFormOpen(false)} 
-      />
-      <EmailSetup />
+     <ComplaintForm
+          isOpen={showForm}
+          onClose={() => setShowForm(false)}
+        />
     </div>
   );
 }

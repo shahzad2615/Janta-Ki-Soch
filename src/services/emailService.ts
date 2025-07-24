@@ -1,56 +1,60 @@
 import emailjs from '@emailjs/browser';
+const SERVICE_ID = 'service_fqnqfik';
+const TEMPLATE_ID = 'template_peu0dqc';
+const PUBLIC_KEY = 'qhS-SL_fHZwJCTOQC';
 
-// EmailJS configuration
-const EMAILJS_SERVICE_ID = 'service_ineeyv7'; // Replace with your EmailJS service ID
-const EMAILJS_TEMPLATE_ID = 'template_ychlsk1'; // Replace with your EmailJS template ID
-const EMAILJS_PUBLIC_KEY = 'kG0TRgyik3-fVAIzD'; // Replace with your EmailJS public key
-
-// Initialize EmailJS
-emailjs.init(EMAILJS_PUBLIC_KEY);
-
+emailjs.init(PUBLIC_KEY);
 export interface EmailData {
   name: string;
   email: string;
   phone?: string;
-  subject?: string;
-  message: string;
+  aadhar?: string;
+  address?: string;
+  category?: string;
+  priority?: string;
+  description?: string;
+  source?: string;
+  comments?: string;
   attachments?: File[];
 }
 
 export const sendEmail = async (data: EmailData): Promise<boolean> => {
   try {
-    // Convert files to base64 for email attachment
-    const attachmentPromises = data.attachments?.map(async (file) => {
-      return new Promise<string>((resolve) => {
-        const reader = new FileReader();
-        reader.onload = () => resolve(reader.result as string);
-        reader.readAsDataURL(file);
-      });
-    }) || [];
-
-    const attachmentData = await Promise.all(attachmentPromises);
-
-    const templateParams = {
-      from_name: data.name,
-      from_email: data.email,
-      phone: data.phone || 'Not provided',
-      subject: data.subject || 'Contact Form Submission',
-      message: data.message,
-      attachments: attachmentData.length > 0 ? attachmentData.join('\n\n') : 'No attachments',
-      attachment_count: data.attachments?.length || 0,
-      to_email: 'itscoder150@gmail.com'
-    };
-
-    const response = await emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
-      templateParams
+    // Convert attachments to base64
+    const attachmentBase64 = await Promise.all(
+      data.attachments?.map(file =>
+        new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result as string);
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        })
+      ) || []
     );
 
-    return response.status === 200;
-  } catch (error) {
-    console.error('Email sending failed:', error);
+    const templateParams: any = {
+      from_name: data.name,
+      from_email: data.email,
+      phone: data.phone || '',
+      aadhar: data.aadhar || '',
+      address: data.address || '',
+      category: data.category || '',
+      priority: data.priority || '',
+      description: data.description || '',
+      source: data.source || '',
+      comments: data.comments || '',
+      to_email: 'coderhub230@gmail.com',
+    };
+
+    // Add attachments dynamically: attach1, attach2, …
+    attachmentBase64.forEach((base64, i) => {
+      templateParams[`attachment${i + 1}`] = base64;
+    });
+
+    const res = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+    return res.status === 200;
+  } catch (err) {
+    console.error('Email sending failed:', err);
     return false;
   }
 };
-
