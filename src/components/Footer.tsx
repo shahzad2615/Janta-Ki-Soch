@@ -26,7 +26,7 @@ const Footer = () => {
               Utkarsh acts as the bridge between citizens and authorities, ensuring speedy 
               resolution of issues through our systematic 6-step process.
             </p>
-            <div className="flex items-center text-yellow-300">
+            <div className="flex items-center text-blue-500">
               <Heart className="w-5 h-5 mr-2" />
               <span className="font-semibold">Utkarsh is Here for You!</span>
             </div>
@@ -115,19 +115,19 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-blue-400 mb-1">1000+</div>
+              <div className="text-3xl font-bold text-blue-500 mb-1">1000+</div>
               <div className="text-gray-300">Citizens Helped</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-400 mb-1">100%</div>
+              <div className="text-3xl font-bold text-blue-500 mb-1">100%</div>
               <div className="text-gray-300">Confidential</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-1">24/7</div>
+              <div className="text-3xl font-bold text-blue-500 mb-1">24/7</div>
               <div className="text-gray-300">Support Available</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-400 mb-1">6</div>
+              <div className="text-3xl font-bold text-blue-500 mb-1">6</div>
               <div className="text-gray-300">Step Process</div>
             </div>
           </div>
