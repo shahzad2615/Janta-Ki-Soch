@@ -76,9 +76,7 @@ const Process = () => {
               </p>
 
               {/* Connector Line (except for last items in each row) */}
-              {index < steps.length - 1 && (index + 1) % 3 !== 0 && (
-                <div className="hidden lg:block absolute top-8 -right-4 w-8 h-0.5 bg-gradient-to-r from-blue-300 to-teal-300"></div>
-              )}
+             
             </div>
           ))}
         </div>
