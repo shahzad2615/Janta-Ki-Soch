@@ -21,7 +21,7 @@ const Hero = () => {
             <p className="text-base sm:text-lg mb-4 text-blue-100">Public Opinion by Utkarsh Global Foundation</p>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-6">
-              <h2 className="text-lg sm:text-xl font-semibold mb-2 text-yellow-300">Utkarsh is Here for You!</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-2 text-cyan-500">Utkarsh is Here for You!</h2>
               <p className="text-sm sm:text-base text-blue-100">Calling Citizens to Share Their Grievances!</p>
             </div>
             
@@ -45,10 +45,10 @@ const Hero = () => {
           {/* Right Stats */}
           <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4">
             {[
-              { Icon: Users, value: '1000+', label: 'Citizens Helped', color: 'text-yellow-300' },
+              { Icon: Users, value: '1000+', label: 'Citizens Helped', color: 'text-green-300' },
               { Icon: Shield, value: '100%', label: 'Confidential', color: 'text-green-300' },
-              { Icon: Heart, value: '24/7', label: 'Support', color: 'text-red-300' },
-              { Icon: null, value: '6', label: 'Step Process', color: 'text-blue-100' },
+              { Icon: Heart, value: '24/7', label: 'Support', color: 'text-green-300' },
+              { Icon: Shield, value: '6', label: 'Step Process', color: 'text-green-300' },
             ].map((s, i) => (
               <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center text-white">
                 {s.Icon && <s.Icon className={`w-8 sm:w-10 h-8 sm:h-10 mx-auto mb-2 ${s.color}`} />}

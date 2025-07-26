@@ -110,7 +110,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         {/* Statistics */}
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
